@@ -11,14 +11,20 @@
         <!-- Fontawesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <!-- Link jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
         <!-- Link css -->
         <link rel="stylesheet" href="style.css">
+
+        <!-- Link javascript -->
+        <script src="script.js"></script>
 
     </head>
     <body>
         <div class="container-fluid">
             <header class="row">
-                <div class="col-12 d-flex flex-column justify-content-center text-center menuNavegacao">
+                <div class="col d-flex flex-column justify-content-center text-center menuNavegacao">
                     <div class="row">
                         <div class="col-2 logotipo">
                             <p class="m-0 my-3">BayaBlanca</p>
@@ -37,13 +43,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 w-100 heroSection">
+                <div class="col w-100 heroSection">
                     <p class="text-center">"Viva uma experiência inesquecível"</p>
                 </div>
             </header>
 
             <section class="row bookingStrip">
-                <div class="col d-flex flex-row justify-content-center text-center gap-3">
+                <form class="col d-flex flex-row justify-content-center text-center gap-3">
                     <div class="col-2 d-flex flex-column justify-content-center text-center">
                         <label for="checkin">Check-in:</label>
                         <input class="form-control w-75 mx-auto text-center" type="date" name="checkin" id="checkin">
@@ -61,12 +67,125 @@
                             <span><i class="fas fa-search"></i></span><span class="mx-4">Reservar agora</span>
                         </button>
                     </div>
+                </form>
+            </section>
+
+            <main class="row eventsSection p-4">
+                
+                <div class="row my-5 w-75 gap-5 mx-auto d-flex flex-column justify-content-center text-center">
+                    <div class="col-12" id="titulo">
+                        <h1>Os melhores eventos estão aqui!</h1>
+                        <P>Realizamos todos os tipos de eventos para tornar suas experiências ainda mais momoráveis</P>
+                    </div>
+                    <div class="col-12">
+                        <div class="row gap-5 p-4">
+                            <div class="col-12 mb-5">
+                                <div class="row">
+                                    <div class="col-7 " id="evento1"></div>
+                                    <div class="col-5 p-4 text-start d-flex flex-column justify-content-center" id="descricaoEvento">
+                                        <h5>Praia Sul</h5>
+                                        <h2>Beach Party</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, natus.</p>
+                                        <h5>09 Set 2024 <span>&nbsp;&bull;</span> por 3 dias</h5>
+                                        <div class="divBotaoEventos">
+                                            <button type="button" class="btn btn-info btn-lg rounded-5 px-4">Saber mais</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-5 p-4 text-end d-flex flex-column justify-content-center" id="descricaoEvento">
+                                        <h5>Praia Noroeste</h5>
+                                        <h2>Tropical Moment</h2>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem cupiditate quod sint?</p>
+                                        <h5>18 Set 2024 <span>&nbsp;&bull;</span> por 5 dias</h5>
+                                        <div class="text-end divBotaoEventos">
+                                            <button type="button" class="btn btn-info btn-lg rounded-5 px-4">Saber mais</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 " id="evento2"></div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+            <section class="row ctaSection">
+                <div class="col d-flex justify-content-center text-center" id="ctaImage">
+                    <div class="h-25 d-flex justify-content-center text-center my-auto">
+                        <button type="submit" class="btn btn-info rounded-4 botaoReservar">
+                            <span><i class="fas fa-search"></i></span><span class="mx-4">Reservar agora</span>
+                        </button>
+                    </div>
                 </div>
             </section>
 
-            <main class="row eventsSection">
+            <section class="row p-4 sectionQuartos">
+                <div class="col-12 my-5 d-flex flex-column justify-content-center text-center" id="titulo">
+                    <h1>Quartos de luxo</h1>
+                    <P>Acesse todo nosso catálogo de quartos</P>
+                </div>
+                <div class="col-12 mb-5">
+                    <div class="row d-flex flex-row justify-content-around text-center">
+                        <div class="col-3 d-flex flex-column justify-content-center text-center">
+                            <div class="imgRoom1 mb-2"></div>
+                            <h3><strong>Quarto up</strong></h3>
+                            <span style="margin-bottom:15px; margin-top: -10px; color: grey">1 banheiro</span>
+                            <div><span class="precoQuarto">R$ 1.750,00 </span><span> /5 dias</span></div>
+                        </div>
+                        <div class="col-3 d-flex flex-column justify-content-center text-center">
+                            <div class="imgRoom2 mb-2"></div>
+                            <h3><strong>Quarto up+</strong></h3>
+                            <span style="margin-bottom:15px; margin-top:-10px; color: grey">1 banheiro com hidromassagem</span>
+                            <div><span class="precoQuarto">R$ 2.150,00 </span><span> /5 dias</span></div>
+                        </div>
+                        <div class="col-3 d-flex flex-column justify-content-center text-center">
+                        <div class="imgRoom3 mb-2"></div>
+                            <h3><strong>Quarto Solteiro</strong></h3>
+                            <span style="margin-bottom:15px; margin-top:-10px; color: grey">2 banheiros</span>
+                            <div><span class="precoQuarto">R$ 1.520,00 </span><span> /3 dias</span></div>
+                        </div>
+                    </div>
+                    <div class="row mt-3 mb-5">
+                        <div class="col text-end">
+                            <a href="" class="nav-link">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            </main>
+            <footer class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="col-2 logotipoFooter">
+                                <p class="m-0 my-3">BayaBlanca</p>
+                            </div>
+                        </div>
+                        <nav class="col-8 ">
+                            <ul class="navbar navbar-nav my-4 d-flex flex-row justify-content-end p-2 gap-4" id="menuNavegacaoFooter">
+                                <li class="nav-item">Home</li>
+                                <li class="nav-item">Quartos</li>
+                                <li class="nav-item">Serviços</li>
+                                <li class="nav-item">Sobre nós</li>
+                                <li class="nav-item">Contato</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="row my-5">
+                        <div class="col-6 text-start"><span class="mx-4">©️ Todos os direitos reservados</span></div>
+                        <div class="col-6 text-end d-flex flex-row justify-content-end gap-4 text-center">Nossas redes sociais: 
+                            <span><a class="nav-link" href=""><i class="fa-brands fa-facebook-f"></i></a></span>
+                            <span><a class="nav-link" href=""><i class="fa-brands fa-instagram"></i></a></span>
+                            <span><a class="nav-link" href=""><i class="fa-brands fa-x-twitter"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
